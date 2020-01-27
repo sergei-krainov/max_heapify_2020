@@ -83,10 +83,10 @@ template<typename Container>
 void max_heapify(Container& v, typename Container::size_type i)
 {
     auto largest_i = i;
-    auto size = v.size();
+    const auto size = v.size();
 
-    auto left_i = left_node_index(i);
-    auto right_i = right_node_index(i);
+    const auto left_i = left_node_index(i);
+    const auto right_i = right_node_index(i);
 
     if (left_i > size && right_i > size) {
         return;
